@@ -3,5 +3,13 @@ name = "fFS"
 version = "0.1.0"
 edition = "2024"
 
+[profile.release]
+panic = "abort" # Terminate the process immediately on panic
+lto = true      # Optional: Enable Link-Time Optimization for further size/speed benefits
+
+[profile.dev]
+panic = "abort" # Terminate the process immediately on panic
+lto = true      # Optional: Enable Link-Time Optimization for further size/speed benefits
+
 [dependencies]
-block-utils = "0.11.1"
+lazy_static = "1.5.0"
